@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WonderDash! - Magical Kids Endless Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header>
+            <div class="title-group">
+                <h1>🌈 WonderDash!</h1>
+                <span id="world-badge" class="badge">🌿 Sunny Meadow</span>
+            </div>
+            <div class="hud">
+                <span id="hearts" class="hearts">❤️❤️❤️</span>
+                <span class="stat">⭐ <strong id="score">0</strong></span>
+                <span class="stat">🏆 <strong id="high-score">0</strong></span>
+            </div>
+        </header>
+
+        <!-- Fever Progress Bar -->
+        <div class="fever-container">
+            <div id="fever-bar" class="fever-bar"></div>
+            <span id="fever-text" class="fever-text">⚡ Collect stars for Rainbow Fever!</span>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            
+            <!-- Active Power-up Indicator -->
+            <div id="powerup-banner" class="powerup-banner hidden">🦄 Unicorn Wings Active!</div>
+
+            <!-- Start & Game Over Overlay -->
+            <div id="overlay" class="overlay">
+                <h2 id="overlay-title">Ready for an Adventure?</h2>
+                <p id="overlay-subtitle">Tap or press SPACE to jump • Crack 🥚 Mystery Eggs for superpowers!</p>
+                
+                <div class="player-select">
+                    <label for="player-name">Choose Your Hero:</label>
+                    <select id="player-name">
+                        <option value="SuperBunny">🐰 SuperBunny</option>
+                        <option value="HappyTiger">🐯 HappyTiger</option>
+                        <option value="StarPanda">🐼 StarPanda</option>
+                        <option value="TurboFox">🦊 TurboFox</option>
+                        <option value="MagicUnicorn">🦄 MagicUnicorn</option>
+                        <option value="SunnyLion">🦁 SunnyLion</option>
+                    </select>
+                </div>
+
+                <button id="start-btn" class="big-btn">▶ START ADVENTURE</button>
+            </div>
+        </div>
+
+        <div class="leaderboard-box">
+            <h3>🏆 World Star Champions</h3>
+            <ul id="leaderboard-list">
+                <li>Loading champions...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
